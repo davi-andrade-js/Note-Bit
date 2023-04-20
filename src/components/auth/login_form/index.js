@@ -61,7 +61,8 @@ function LoginForm() {
                   <Column>
                     <a
                       className="button is-white has-text-custom-purple"
-                      onClick={(e) => setRedirectToRegister(true)}>
+                      onClick={(e) => setRedirectToRegister(true)}
+                    >
                       Register or
                     </a>
                   </Column>

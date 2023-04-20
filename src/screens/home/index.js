@@ -17,12 +17,12 @@ const HomeScreen = () => (
               Create notes easily and access when you wants on the cloud
             </Title>
             <Title size={5} spaced className="has-text-light" subtitle>
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs.
+              Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+              print, graphic or web designs.
               <br />
               <br />
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print.
+              Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+              print.
             </Title>
             <Link to="/register" className="button is-outlined is-white">
               <strong>Register for free Now</strong>

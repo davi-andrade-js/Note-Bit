@@ -66,7 +66,8 @@ function Notes(props) {
           disableAutoFocus
           outerContainerId={"notes"}
           customBurgerIcon={false}
-          customCrossIcon={false}>
+          customCrossIcon={false}
+        >
           <Column.Group>
             <Column size={10} offset={1}>
               <Search searchNotes={searchNotes} fetchNotes={fetchNotes} />

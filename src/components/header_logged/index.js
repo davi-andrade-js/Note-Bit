@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
-import { Navbar, Container, Column, Button, Dropdown } from 'rbx';
+import React, { useState } from "react";
+import { Navbar, Container, Column, Button, Dropdown } from "rbx";
 import logoImage from "../../assets/images/logo-white.png";
 import "../../styles/header.scss";
-import UsersService from '../../services/users';
+import UsersService from "../../services/users";
 import { Redirect, Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faList } from "@fortawesome/free-solid-svg-icons";
 
 function HeaderLogged(props) {
   const [redirectToHome, setRedirectToHome] = useState(false);
-  const [user, setUser] = useState(localStorage.getItem('user'));
+  const [user, setUser] = useState(localStorage.getItem("user"));
 
   const logOut = async () => {
     await UsersService.logout();
     setRedirectToHome(true);
-  }
+  };
 
-  if (redirectToHome == true)
-    return <Redirect to={{ pathname: "/" }} />
+  if (redirectToHome == true) return <Redirect to={{ pathname: "/" }} />;
 
   return (
     <Navbar color="custom-purple" className="navbar-logged">
@@ -33,7 +32,8 @@ function HeaderLogged(props) {
           className="navbar-burger burger"
           aria-label="menu"
           aria-expanded="false"
-          data-target="navbar-menu">
+          data-target="navbar-menu"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -47,7 +47,8 @@ function HeaderLogged(props) {
               className="open-button"
               color="white"
               outlined
-              onClick={() => props.setIsOpen(true)}>
+              onClick={() => props.setIsOpen(true)}
+            >
               <FontAwesomeIcon icon={faList} />
             </Button>
           </Navbar.Item>
@@ -57,7 +58,7 @@ function HeaderLogged(props) {
             <Dropdown>
               <Dropdown.Trigger>
                 <Button className="button" color="white" outlined>
-                  <span>{JSON.parse(user)['name']} ▼</span>
+                  <span>{JSON.parse(user)["name"]} ▼</span>
                 </Button>
               </Dropdown.Trigger>
               <Dropdown.Menu>
@@ -67,7 +68,9 @@ function HeaderLogged(props) {
                   </Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item as="div">
-                    <a href="#" onClick={e => logOut()}>LogOut</a>
+                    <a href="#" onClick={(e) => logOut()}>
+                      LogOut
+                    </a>
                   </Dropdown.Item>
                 </Dropdown.Content>
               </Dropdown.Menu>
@@ -76,7 +79,7 @@ function HeaderLogged(props) {
         </Navbar.Segment>
       </Navbar.Menu>
     </Navbar>
-  )
+  );
 }
 
 export default HeaderLogged;

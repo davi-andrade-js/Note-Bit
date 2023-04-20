@@ -23,10 +23,7 @@ const RegisterScreen = () => (
 
                   <Column.Group>
                     <Column size={12}>
-                      <Title
-                        size={6}
-                        className="has-text-grey has-text-centered"
-                      >
+                      <Title size={6} className="has-text-grey has-text-centered">
                         Your notes on the cloud
                       </Title>
                     </Column>

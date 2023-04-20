@@ -16,7 +16,8 @@ function Header() {
             className="navbar-burger burger"
             aria-label="menu"
             aria-expanded="false"
-            data-target="navbar-menu">
+            data-target="navbar-menu"
+          >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>

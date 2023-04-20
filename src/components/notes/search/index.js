@@ -30,7 +30,8 @@ function Search(props) {
           onClick={() => {
             props.fetchNotes();
             setQuery("");
-          }}>
+          }}
+        >
           <FontAwesomeIcon icon={faTimes} color="grey" className="is-pulled-left  " />
         </a>
       </Column>
